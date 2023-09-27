@@ -16,7 +16,7 @@ public class BaseClass {
         driver = new ChromeDriver();
         
         driver.manage().window().maximize();
-
+        driver.get("https://www.snipsave.com/");
 	}
 	
 	public static WebDriver getWebDriver() {

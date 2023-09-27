@@ -19,7 +19,17 @@ public class SignUp {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement signupBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/header/div[2]/a[1]")));
 		signupBtn.click();
-	
-	//driver.findElement(By.xpath("/html/body/div/header/div[2]/a[1]")).click();
+		
+		WebElement firstname = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("field_first_name")));
+		firstname.sendKeys("Salim");
+		WebElement lastname = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("field_last_name")));
+		lastname.sendKeys("Souidi");
+		WebElement email = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("field_email")));
+		email.sendKeys("salimessouidi7@gmail.com");
+		WebElement password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("field_password")));
+		password.sendKeys("salim@1234");
+		WebElement button = wait.until(ExpectedConditions.elementToBeClickable(By.name("submit")));
+		button.click();
+		
 	}
 }
