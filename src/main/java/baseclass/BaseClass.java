@@ -9,8 +9,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass {
 	static WebDriver driver;
 	public static void setUp() {
-		// Set up ChromeDriver using WebDriverManager
-        WebDriverManager.chromedriver().setup();
 
         // Create an instance of ChromeDriver
         driver = new ChromeDriver();
